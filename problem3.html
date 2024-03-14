@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>practice</title>
+
+    <style>
+
+  #parent{border: blue 2px solid;height: 250px;display:flex;}
+    #nam{color: aquamarine;}
+    </style>
+</head>
+<body>
+    <div id="root">
+
+
+
+
+    </div>
+</body>
+
+</html>
+<script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+  
+   
+    <script>
+let create=React.createElement("div",{
+idName:"parent",
+style:{display:"flex",border: "2px solid green",height:"300px",justifyContent:"space-around"},
+children:[React.createElement("div",{
+
+style:{height:"100px",width:"100px",border:"2px solid red",backgroundColor:"red",color:"white"}
+},1),
+
+React.createElement("div",{
+    style:{height:"100px",width:"100px",border:"2px solid yellow",backgroundColor:"yellow",color:"white"}
+
+},2),
+React.createElement("div",{
+    style:{height:"100px",width:"100px",border:"2px solid blue",backgroundColor:"blue",color:"white"}
+
+},3),
+
+]
+
+})
+
+   let dom=ReactDOM.createRoot(document.getElementById("root"))
+   dom.render(create)
+   </script>
